@@ -1,36 +1,20 @@
-# Experiments of Federated Learning for COVID-19 Chest X-ray Images
+# A Novel Optimized Asynchronous Federated Learning Framework
 
-This repository contains the code for the paper ["Experiments of Federated Learning for COVID-19 Chest X-ray Images"](https://arxiv.org/abs/2007.05592) by Boyi Liu, Bingjie Yan, Yize Zhou, et al.
+This repository contains the code for the paper A Novel Optimized Asynchronous Federated Learning Framework.
 ## Abstract
 
-AI plays an important role in COVID-19 identification. Computer vision and deep learning techniques can assist in determining COVID-19 infection with Chest X-ray Images. However, for the protection and respect of the privacy of patients, the hospital's specific medical-related data did not allow leakage and sharing without permission. Collecting such training data was a major challenge. To a certain extent, this has caused a lack of sufficient data samples when performing deep learning approaches to detect COVID-19. Federated Learning is an available way to address this issue. It can effectively address the issue of data silos and get a shared model without obtaining local data. In the work, we propose the use of federated learning for COVID-19 data training and deploy experiments to verify the effectiveness. And we also compare performances of four popular models (MobileNet, ResNet18, MoblieNet, and COVID-Net) with the federated learning framework and without the framework. This work aims to inspire more researches on federated learning about COVID-19.
-
-## Contents
-
-This will train and evaluate the four models (MobileNet, ResNet18, MoblieNet, and COVID-Net) with and without the federated learning framework.
-
-PyTorch implementation of COVID-Net, training with CODIVx v3 dataset
-
-## Acknowlegement
-This repo is forked from <a href="https://github.com/lindawangg">https://github.com/lindawangg</a> and  <a href="https://github.com/IliasPap/COVIDNet">https://github.com/IliasPap/COVIDNet</a>
+Federated Learning (FL) since proposed has been applied in many fields, such as credit assessment, medical, etc. Because of the difference in the network or computing resource, the clients may not update their gradients at the same time that may take a lot of time to wait or idle. That's why Asynchronous Federated Learning (AFL) method is needed. The main bottleneck in AFL is communication. How to find a balance between the model performance and the communication cost is a challenge in AFL. This paper proposed a novel AFL framework VAFL. And we verified the performance of the algorithm through sufficient experiments. The experiments show that VAFL can reduce the communication times about 51.02\% with 48.23\% average communication compression rate and allow the model to be converged faster.
 
 ## Citation
 If you find this code useful for your research, please cite our paper:
 
 ```
-@article{liu2020experiments, <br>
-  title={Experiments of federated learning for covid-19 chest x-ray images}, <br>
-  author={Liu, Boyi and Yan, Bingjie and Zhou, Yize and Yang, Yifan and Zhang, Yixian}, <br>
-  journal={arXiv preprint arXiv:2007.05592}, <br>
-  year={2020} <br>
-}
-
-@inproceedings{yan2021experiments, <br>
-  title={Experiments of federated learning for COVID-19 chest X-ray images}, <br>
-  author={Yan, Bingjie and Wang, Jun and Cheng, Jieren and Zhou, Yize and Zhang, Yixian and Yang, Yifan and Liu, Li and Zhao, Haojiang and Wang, Chunjuan and Liu, Boyi}, <br>
-  booktitle={Advances in Artificial Intelligence and Security: 7th International Conference, ICAIS 2021, Dublin, Ireland, July 19-23, 2021, Proceedings, Part II 7}, <br>
-  pages={41--53}, <br>
-  year={2021}, <br>
-  organization={Springer} <br>
+@inproceedings{zhou2021novel,<br>
+  title={A Novel Optimized Asynchronous Federated Learning Framework},<br>
+  author={Zhou, Zhicheng and Chen, Hailong and Li, Kunhua and Hu, Fei and Yan, Bingjie and Cheng, Jieren and Wei, Xuyan and Liu, Bernie and Li, Xiulai and Chen, Fuwen and others},<br>
+  booktitle={2021 IEEE 23rd Int Conf on High Performance Computing \& Communications; 7th Int Conf on Data Science \& Systems; 19th Int Conf on Smart City; 7th Int Conf on Dependability in Sensor, Cloud \& Big Data Systems \& Application (HPCC/DSS/SmartCity/DependSys)},<br>
+  pages={2363--2370},<br>
+  year={2021},<br>
+  organization={IEEE}<br>
 }
 ```
